@@ -17,9 +17,7 @@ function App() {
         return;
       }
     } catch (e) {
-      setError(
-        "Please check the text in the textarea field. There must paste correct array value"
-      );
+      setError("Please enter valid array");
       return;
     }
     const sum = findSum(array);
@@ -29,15 +27,17 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
+        <div>
           <textarea
+            className="App-text"
             value={value}
             onChange={e => {
               setValue(e.target.value);
             }}
           />
-        </p>
-        <div>Example: [0,1,2,3,4,5]</div>
+          <div className="App-hint">Example: [0,1,2,3,4,5]</div>
+        </div>
+
         {error && <div className="App-error">{error}</div>}
         <button className="App-button" onClick={calculateResult}>
           Calculate

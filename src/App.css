@@ -13,10 +13,25 @@
   color: white;
 }
 
+.App-text {
+    width: 325px;
+    min-height: 150px;
+}
+
+.App-hint {
+    text-align: left;
+    width: 300px;
+    font-size: 13pt;
+    padding-left: 6px;
+    color: #bdbdbd;
+}
+
 .App-button {
-  color: #61dafb;
+  color: black;
 }
 
 .App-error {
   color: red;
+    font-size: 14pt;
+    margin: 14px;
 }
